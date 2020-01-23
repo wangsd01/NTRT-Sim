@@ -74,8 +74,8 @@ namespace
      200.0,    // damping (kg / sec)
      16.84,     // rod_length (length)
      7.5,      // rod_space (length)
-     0.99,      // friction (unitless)
-     0.01,     // rollFriction (unitless)
+     0.99, // 0.99,      // friction (unitless)
+     0.01, // 0.01,     // rollFriction (unitless)
      0.0,      // restitution (?)
      2452.0,        // pretension -> set to 4 * 613, the previous value of the rest length controller
      0,			// History logging (boolean)
@@ -180,14 +180,14 @@ void T6Model::setup(tgWorld& world)
     addNodes(s);
     addRods(s);
     addActuators(s);
-    s.move(btVector3(0, 10, 0));
+    s.move(btVector3(0, 1000, 0));
 
     // Add a rotation. This is needed if the ground slopes too much,
     // otherwise  glitches put a rod below the ground.
-    btVector3 rotationPoint = btVector3(0, 0, 0); // origin
-    btVector3 rotationAxis = btVector3(0, 1, 0);  // y-axis
-    double rotationAngle = M_PI/2;
-    s.addRotation(rotationPoint, rotationAxis, rotationAngle);
+    // btVector3 rotationPoint = btVector3(0, 0, 0); // origin
+    // btVector3 rotationAxis = btVector3(0, 1, 0);  // y-axis
+    // double rotationAngle = M_PI/2;
+    // s.addRotation(rotationPoint, rotationAxis, rotationAngle);
 
     // Create the build spec that uses tags to turn the structure into a real model
     tgBuildSpec spec;

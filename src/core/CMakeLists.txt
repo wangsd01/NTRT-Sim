@@ -1,7 +1,7 @@
 #Project name must match folder name for includes to work!
 project(core)
 
-set(CMAKE_BUILD_TYPE Release)
+#set(CMAKE_BUILD_TYPE Release)
 
 add_library( ${PROJECT_NAME} SHARED
   tgWorldBulletPhysicsImpl.cpp

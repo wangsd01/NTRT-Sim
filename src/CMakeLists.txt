@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.6)
 
 PROJECT(NASA_Tensegrity_Robotics_Toolkit)
 
-set(CMAKE_BUILD_TYPE Release)
+set(CMAKE_BUILD_TYPE Debug)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 # Add your subdirectories here
@@ -16,7 +16,7 @@ subdirs(
     models
     controllers
     dev
-    #examples
+    examples
 )
 
 add_definitions(

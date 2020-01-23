@@ -1,6 +1,6 @@
 Project(Dev)
 
-set(CMAKE_BUILD_TYPE Release)
+#set(CMAKE_BUILD_TYPE Release)
 
 # Add additional dev directories here.
 subdirs(

@@ -6,9 +6,9 @@ subdirs(
     3_prism_serialize
     NestedTetrahedrons
     SUPERball
-    learningSpines
+#    learningSpines
     testjson
-    craterEscape
+#    craterEscape
 )
 
 
