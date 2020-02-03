@@ -140,7 +140,7 @@ void T1Model::setup(tgWorld& world)
     spec.addBuilder("rod", new tgRodInfo(rodConfig));
     spec.addBuilder("muscle", new tgBasicActuatorInfo(muscleConfig));
 
-    const tgSphere::Config sphereConfig(0.5, 0.); // density is 0, means static
+    const tgSphere::Config sphereConfig(0.1, 0.); // density is 0, means static
     spec.addBuilder("sphere", new tgSphereInfo(sphereConfig));
     
     // Create your structureInfo

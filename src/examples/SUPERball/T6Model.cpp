@@ -150,7 +150,6 @@ void T6Model::addActuators(tgStructure& s)
     s.addPair(3, 9,  "muscle");
     s.addPair(3, 11, "muscle");
 
-    s.addPair(4, 2,  "muscle");
     s.addPair(4, 10, "muscle");
     s.addPair(4, 11, "muscle");
 
