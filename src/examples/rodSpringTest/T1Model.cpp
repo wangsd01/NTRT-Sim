@@ -55,7 +55,7 @@ namespace
     } c =
    {
      0.688,    // density (kg / length^3)
-     0.31,     // radius (length)
+     0.5,     // radius (length)
      613.0,   // stiffness (kg / sec^2) was 1500
      200.0,    // damping (kg / sec)
      16.84,     // rod_length (length)
@@ -90,9 +90,10 @@ void T1Model::addNodes(tgStructure& s)
 {
     const double half_length = c.rod_length / 2;
 
-    s.addNode(-c.rod_space,  -half_length, 0);            // 0
-    s.addNode(-c.rod_space,   half_length, 0);            // 1
-    s.addNode(0,           -c.rod_space,   -half_length, "sphere"); // 2
+    s.addNode(0,  -1, 0);            // 0
+    s.addNode(0,   1, 0);            // 1
+    s.addNode(0,  0,  1, "anchor"); // 2
+    s.addNode(0,  1,  0.5, "anchor"); // 3
 }
 
 void T1Model::addRods(tgStructure& s)
@@ -107,7 +108,7 @@ void T1Model::addNails(tgStructure& s)
 
 void T1Model::addActuators(tgStructure& s)
 {
-    s.addPair(0, 2,  "muscle");
+    s.addPair(3, 2,  "muscle");
 }
 
 void T1Model::setup(tgWorld& world)
